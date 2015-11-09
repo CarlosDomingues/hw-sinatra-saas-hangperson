@@ -7,16 +7,12 @@ class HangpersonGame
 
   def initialize(new_word)
     
+    #if new_word == ''
+    #  raise(ArgumentError)
+
+    #end
     
-    
-    
-    
-    if new_word == ''
-      @word = self.get_random_word
-    else
-      @word = new_word
-    end
-    
+    @word = new_word
     @guesses =""
     @wrong_guesses = ""
   end
