@@ -40,6 +40,11 @@ class HangpersonApp < Sinatra::Base
   post '/guess' do
     letter = params[:guess].to_s[0]
     
+    if letter == nil
+      flash[:message] = "Invalid guess."
+      redirect '/show'
+    end
+    
     letter.downcase!
     if (letter !~ /[^a-z]/)
       result = @game.guess(letter)
