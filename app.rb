@@ -48,7 +48,7 @@ class HangpersonApp < Sinatra::Base
       end
       redirect '/show'         
     else
-      flash[:message] = "Invalid guess.."
+      flash[:message] = "Invalid guess."
       redirect '/show' 
     end
   end
